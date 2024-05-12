@@ -1,7 +1,9 @@
 body{
     text-align: center;
     font-size: xx-large;
-    background-image: url(images/table.png)
+    background-image: url(images/table.png);
+    color: white;
+    
 }
 
 
