@@ -7,6 +7,14 @@ let messageEl = document.querySelector("#message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.querySelector("#cards-el");
 
+let player = {
+    name: prompt("What is your name?") || "Guest",
+    chips: parseInt(prompt("How much money are you betting?")) || 100
+}
+
+let playerEl = document.querySelector("#player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 function getRandomCard(){
     let random = Math.floor(Math.random() * 13) + 1;
 
