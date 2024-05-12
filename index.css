@@ -19,8 +19,18 @@ h1{
 
 button{
     color: #016f32;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
     margin-top: 50px;
     width: 200px;
-    height: 50px;
+    height: 40px;
     background-color: goldenrod;
+}
+
+button:hover{
+    cursor: pointer;
 }
