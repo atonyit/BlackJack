@@ -34,7 +34,10 @@ function renderGame() {
     }
     messageEl.textContent = message;
     sumEl.textContent = "Sum: " + sum;
-    cardsEl.textContent = "Cards: " + cards;
+    cardsEl.textContent = "Cards: ";
+    for(let i = 0; i < cards.length; ++i){
+        cardsEl.textContent += cards[i] + " ";
+    }
 }
 
 function newCard(){
