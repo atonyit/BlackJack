@@ -1,5 +1,7 @@
 let firstCard = 10;
 let secondCard = 4;
+
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -16,7 +18,11 @@ let cardsEl = document.querySelector("#cards-el");
 
 console.log(cardsEl);
 
-function startGame() {
+function startGame(){
+    renderGame();
+}
+
+function renderGame() {
     if (sum <= 20) {
         message = "Do you want to draw a new card?";
     } else if (sum === 21){
@@ -28,11 +34,15 @@ function startGame() {
     }
     messageEl.textContent = message;
     sumEl.textContent = "Sum: " + sum;
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
+    cardsEl.textContent = "Cards: " + cards;
 }
 
 function newCard(){
     console.log("Drawing a new card from the deck!");
+    let newCard = 5;
+    cards.push(newCard);
+    sum += newCard;
+    renderGame();
 }
 
 
